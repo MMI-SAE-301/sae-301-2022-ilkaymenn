@@ -14,11 +14,9 @@ import type { Montre } from "../types";
   },
 ];*/
 import { supabase } from "@/supabase";
-
 const props = defineProps<{
   max?: number;
 }>();
-
 const { data: montre, error } = await supabase
   .from("montre")
   .select("*")
