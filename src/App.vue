@@ -15,6 +15,7 @@
   </nav>
 
   <SvgFace></SvgFace>
+  <SvgProfil></SvgProfil>
 
   <!-- Affiche les pages -->
   <Suspense>
@@ -25,4 +26,5 @@
 <script setup lang="ts">
 import { Bars3Icon } from "@heroicons/vue/20/solid";
 import SvgFace from "./components/SvgFace.vue";
+import SvgProfil from "./components/SvgProfil.vue";
 </script>
