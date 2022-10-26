@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import FormSvg from "../components/FormSvg.vue";
+defineProps<{
+  id: string;
+}>();
 </script>
-
 <template>
-  <div>
-    <h1>test</h1>
-    <FormSvg></FormSvg>
-  </div>
+  <FormSvg :id="id" />
 </template>
