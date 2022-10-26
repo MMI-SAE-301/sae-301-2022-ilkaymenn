@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import type { Montre } from "@/types";
+import { colors } from "@/types";
 import { ref } from "vue";
 import { supabase } from "../supabase";
 import { useRouter } from "vue-router";
 import SvgFace from "../components/SvgFace.vue";
 import SvgProfil from "../components/SvgProfil.vue";
-import FormKitListColors from "./FormKitListColors.vue";
+// import FormKitListColors from "./FormKitListColors.vue";
 
 const router = useRouter();
 const montre = ref({});
@@ -97,11 +98,101 @@ async function upsertMontre(dataForm, node) {
         </div>
       </div>
 
-      <FormKit type="form" v-model="montre" @submit="upsertMontre">
-        <FormKitListColors name="design" label="design" />
+      <div class="azonix -m-5 flex bg-noirPages p-5 text-blanc">
+        <ul class="">
+          <li><a href="#slide1">design</a></li>
+          <li><a href="#slide2">boitier</a></li>
+          <li><a href="#slide3">bracelets</a></li>
+        </ul>
+        <FormKit type="form" v-model="montre" @submit="upsertMontre">
+          <div class="carousel w-20">
+            <div class="carousel-item text-base">
+              <FormKit
+                id="slide1"
+                name="design"
+                label="design"
+                value="#FFFFFF"
+                type="radio"
+                :options="colors"
+                :sections-schema="{
+                  inner: { $el: null },
+                  decorator: { $el: null },
+                }"
+                input-class="peer sr-only"
+                options-class="flex gap-1"
+              >
+                <template #label="context">
+                  <div
+                    class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
+                    :style="{ backgroundColor: context.option.value }"
+                  ></div>
+                  <span class="sr-only">{{
+                    context.option.label
+                  }}</span></template
+                >
+              </FormKit>
+            </div>
+            <div class="carousel-item text-xl">
+              <FormKit
+                id="slide2"
+                name="boitier"
+                label="boitier"
+                value="#FFFFFF"
+                type="radio"
+                :options="colors"
+                :sections-schema="{
+                  inner: { $el: null },
+                  decorator: { $el: null },
+                }"
+                input-class="peer sr-only"
+                options-class="flex gap-1"
+              >
+                <template #label="context">
+                  <div
+                    class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
+                    :style="{ backgroundColor: context.option.value }"
+                  ></div>
+                  <span class="sr-only">{{
+                    context.option.label
+                  }}</span></template
+                >
+              </FormKit>
+            </div>
+            <div class="carousel-item text-xl">
+              <FormKit
+                id="slide3"
+                name="bracelets"
+                label="bracelets"
+                value="#FFFFFF"
+                type="radio"
+                :options="colors"
+                :sections-schema="{
+                  inner: { $el: null },
+                  decorator: { $el: null },
+                }"
+                input-class="peer sr-only"
+                options-class="flex gap-1"
+              >
+                <template #label="context">
+                  <div
+                    class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
+                    :style="{ backgroundColor: context.option.value }"
+                  ></div>
+                  <span class="sr-only">{{
+                    context.option.label
+                  }}</span></template
+                >
+              </FormKit>
+            </div>
+          </div>
+        </FormKit>
+      </div>
+
+      <!-- <FormKit type="form" v-model="montre" @submit="upsertMontre">
+        <FormKitListColors name="design" label="design" id="slide1" />
         <FormKitListColors name="boitier" label="boitier" />
         <FormKitListColors name="bracelets" label="bracelets" />
-      </FormKit>
+      </FormKit> -->
     </main>
   </div>
 </template>
