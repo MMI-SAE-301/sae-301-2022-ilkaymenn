@@ -39,15 +39,31 @@ async function upsertMontre(dataForm, node) {
           <p class="azonix text-xl">L'Azox 3700</p>
         </div>
 
-        <div class="justify-items-center">
-          <!-- <ul class="flex gap-1">
-            <li><a href="#profil">Profil</a></li>
-            <li><a href="#face">Face</a></li>
-          </ul> -->
-          <div class="carousel w-64">
-            <SvgProfil class="carousel-item w-64" v-bind="montre" id="profil" />
-            <SvgFace class="carousel-item w-64" v-bind="montre" id="face" />
-          </div>
+        <div class="">
+          <ul class="flex items-center gap-1 space-x-10">
+            <li>
+              <a href="#profil"
+                ><img
+                  src="../../public/icones/flechesG.png"
+                  alt="Icônes flèches gauches"
+              /></a>
+            </li>
+            <div class="carousel w-64">
+              <SvgProfil
+                class="carousel-item w-64"
+                v-bind="montre"
+                id="profil"
+              />
+              <SvgFace class="carousel-item w-64" v-bind="montre" id="face" />
+            </div>
+            <li>
+              <a href="#face"
+                ><img
+                  src="../../public/icones/flechesD.png"
+                  alt="Icônes flèches droites"
+              /></a>
+            </li>
+          </ul>
         </div>
 
         <div class="grid content-between">
