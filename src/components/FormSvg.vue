@@ -32,20 +32,22 @@ async function upsertMontre(dataForm, node) {
 </script>
 
 <template>
-  <div class="p-2">
-    <ul class="flex gap-1">
-      <li><a href="#profil">Profil</a></li>
-      <li><a href="#face">Face</a></li>
-    </ul>
-    <div class="carousel w-64">
-      <SvgProfil class="carousel-item w-64" v-bind="montre" id="profil" />
-      <SvgFace class="carousel-item w-64" v-bind="montre" id="face" />
-    </div>
+  <main>
+    <div class="p-2">
+      <ul class="flex gap-1">
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#face">Face</a></li>
+      </ul>
+      <div class="carousel w-64">
+        <SvgProfil class="carousel-item w-64" v-bind="montre" id="profil" />
+        <SvgFace class="carousel-item w-64" v-bind="montre" id="face" />
+      </div>
 
-    <FormKit type="form" v-model="montre" @submit="upsertMontre">
-      <FormKitListColors name="design" label="design" />
-      <FormKitListColors name="boitier" label="boitier" />
-      <FormKitListColors name="bracelets" label="bracelets" />
-    </FormKit>
-  </div>
+      <FormKit type="form" v-model="montre" @submit="upsertMontre">
+        <FormKitListColors name="design" label="design" />
+        <FormKitListColors name="boitier" label="boitier" />
+        <FormKitListColors name="bracelets" label="bracelets" />
+      </FormKit>
+    </div>
+  </main>
 </template>

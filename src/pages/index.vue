@@ -11,7 +11,7 @@
         </div>
 
         <img
-          src="../../public/montreAccueil.png"
+          src="../../public/images/montreAccueil.png"
           alt="Exemple de personnalisation de montre connectée réalisée par nos soins"
           class="h-60 justify-items-center"
         />
@@ -39,7 +39,7 @@
 
     <div class="mt-12 flex items-center justify-center">
       <img
-        src="../../public/doublesMontres.png"
+        src="../../public/images/doublesMontres.png"
         alt="Deux différentes personnalisations de montres connectées réalisées par nos soins."
         class="h-60"
       />
