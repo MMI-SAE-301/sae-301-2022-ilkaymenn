@@ -3,7 +3,7 @@
 <template>
   <div class="bg-grisPages">
     <nav>
-      <div class="hidden justify-between space-x-12 bg-noirPages px-5 lg:flex">
+      <div class="justify-between space-x-12 bg-noirPages px-5 lg:flex">
         <div class="flex items-center p-2">
           <RouterLink to="/"><img src="/logo.png" class="w-20" /></RouterLink>
         </div>
