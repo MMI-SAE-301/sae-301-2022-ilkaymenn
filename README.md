@@ -1,10 +1,10 @@
 # code de base pour TP (et future SAE 301)
 
-- **Nom :**
-- **Prénom :**
-- **URL maquette Figma:**
+- **Nom : Men**
+- **Prénom : Ilkay**
+- **URL maquette Figma: https://www.figma.com/proto/5NalINZBR0VUEuy6WjTLsw/SAE_301?page-id=1%3A553&node-id=73%3A3962&viewport=898%2C-497%2C0.12&scaling=contain&starting-point-node-id=73%3A3962&show-proto-sidebar=1**
 - **URL publique du site :**
-- **URL projet Supabase :**
+- **URL projet Supabase : https://wuwiwcfxxqnutwsiblzv.supabase.co**
   - [ ] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
 # Auto-évaluation
