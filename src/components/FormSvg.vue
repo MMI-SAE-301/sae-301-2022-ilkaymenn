@@ -32,15 +32,53 @@ async function upsertMontre(dataForm, node) {
 </script>
 
 <template>
-  <main>
-    <div class="p-2">
-      <ul class="flex gap-1">
-        <li><a href="#profil">Profil</a></li>
-        <li><a href="#face">Face</a></li>
-      </ul>
-      <div class="carousel w-64">
-        <SvgProfil class="carousel-item w-64" v-bind="montre" id="profil" />
-        <SvgFace class="carousel-item w-64" v-bind="montre" id="face" />
+  <div>
+    <main>
+      <div class="flex justify-around bg-grisPages p-5 text-noir">
+        <div class="hautG">
+          <p class="azonix text-xl">L'Azox 3700</p>
+        </div>
+
+        <div class="justify-items-center">
+          <!-- <ul class="flex gap-1">
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#face">Face</a></li>
+          </ul> -->
+          <div class="carousel w-64">
+            <SvgProfil class="carousel-item w-64" v-bind="montre" id="profil" />
+            <SvgFace class="carousel-item w-64" v-bind="montre" id="face" />
+          </div>
+        </div>
+
+        <div class="grid content-between">
+          <div class="grid justify-items-center">
+            <p class="azonix hautD text-xl">320.99€</p>
+            <p class="azonix hautD rayer text-base">450.99€</p>
+          </div>
+
+          <div class="basD space-x-2">
+            <div>
+              <input
+                type="radio"
+                id="paiement"
+                name="paiement"
+                value="paiement"
+              />
+              <label class="azonix text-base" for="paiement"
+                >paiement en 4 fois</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="commander"
+                name="commander"
+                value="commander"
+              />
+              <label class="azonix text-2xl" for="paiement">commander</label>
+            </div>
+          </div>
+        </div>
       </div>
 
       <FormKit type="form" v-model="montre" @submit="upsertMontre">
@@ -48,6 +86,12 @@ async function upsertMontre(dataForm, node) {
         <FormKitListColors name="boitier" label="boitier" />
         <FormKitListColors name="bracelets" label="bracelets" />
       </FormKit>
-    </div>
-  </main>
+    </main>
+  </div>
 </template>
+
+<style scoped>
+.rayer {
+  text-decoration: line-through;
+}
+</style>
