@@ -1,7 +1,7 @@
 export interface Montre {
-  design?: "white";
-  boitier?: "white";
-  bracelets?: "black";
+  design?: string;
+  boitier?: string;
+  bracelets?: string;
 }
 
 export const colors = {
