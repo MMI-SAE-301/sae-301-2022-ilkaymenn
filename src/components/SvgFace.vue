@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import type { Montre } from "@/types";
-import { DefaultSerializer } from "v8";
 
 withDefaults(defineProps<Montre>(), {
   design: "white",
-  boitier: "black",
+  boitier: "white",
   bracelets: "black",
 });
 </script>
