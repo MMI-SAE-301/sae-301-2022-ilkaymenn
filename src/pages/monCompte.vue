@@ -1,3 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import LoginLogout from "@/components/LoginLogout.vue";
+</script>
 
-<template><h1>test mon compte</h1></template>
+<template>
+  <div>
+    <LoginLogout />
+  </div>
+</template>
