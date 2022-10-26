@@ -1,13 +1,36 @@
 <script setup lang="ts">
 import type { Montre } from "@/types";
-import { colors } from "@/types";
-import type { label } from "@formkit/inputs";
+import { supabase } from "@/supabase";
 import { ref } from "vue";
-import FormKitListColors from "./FormKitListColors .vue";
-import SvgFace from "./SvgFace.vue";
-import SvgProfil from "./SvgProfil.vue";
+import { useRouter } from "vue-router";
+import SvgFace from "../components/SvgFace.vue";
+import SvgProfil from "../components/SvgProfil.vue";
+// import FormKitListColors from "./FormKitListColors.vue";
 
-const montre = ref<Montre>({});
+const router = useRouter();
+const Montre = ref({});
+const props = defineProps(["id"]);
+if (props.id) {
+  // On charge les données de la maison
+  let { data, error } = await supabase
+    .from("montre")
+    .select("*")
+    .eq("id_montre", props.id);
+  if (error || !data)
+    console.log("n'a pas pu charger le table Maison :", error);
+  else montre.value = data[0];
+}
+
+async function upsertMontre(dataForm, node) {
+  const { data, error } = await supabase.from("montre").upsert(dataForm);
+  if (error) node.setErrors([error.message]);
+  else {
+    node.setErrors([]);
+    router.push({ name: "personnalisation", params: { id: data[0].id } });
+  }
+}
+
+const montre = ref<Montre>(props.data ?? {});
 </script>
 
 <template>

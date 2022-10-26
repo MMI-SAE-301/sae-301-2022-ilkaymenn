@@ -13,13 +13,13 @@
             class="text-blanc no-underline hover:text-indigo-400"
             to="/personnalisation"
           >
-            <code class="font-mono">Personnalisation</code>
+            <code class="azonix">Personnalisation</code>
           </router-link>
           <router-link
             class="text-blanc no-underline hover:text-indigo-400"
             to="/monCompte"
           >
-            <code class="font-mono">Mon Compte</code>
+            <code class="azonix">Mon Compte</code>
           </router-link>
         </div>
       </div>
@@ -31,3 +31,9 @@
     </Suspense>
   </div>
 </template>
+
+<style>
+.azonix {
+  font-family: "azonixregular";
+}
+</style>

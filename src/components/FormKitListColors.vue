@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { colors } from "@/type";
+import { colors } from "@/types";
 defineProps<{
   name?: string;
   label?: string;
@@ -18,7 +18,7 @@ defineProps<{
       decorator: { $el: null },
     }"
     input-class="peer sr-only "
-    option-class="flex gap-1 "
+    option-class="flex gap-1"
   >
     <template #label="context">
       <div

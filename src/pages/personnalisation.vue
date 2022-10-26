@@ -4,6 +4,7 @@ import FormSvg from "../components/FormSvg.vue";
 
 <template>
   <div>
+    <h1>test</h1>
     <FormSvg></FormSvg>
   </div>
 </template>
