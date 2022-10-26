@@ -1,30 +1,33 @@
+<script setup lang="ts"></script>
+
 <template>
-  <nav>
-    <h4 class="text-xl">
-      <Bars3Icon class="inline-block h-5 w-5 text-blue-500" />
-      menu (dans <code class="font-mono">/src/App.vue</code>)
-    </h4>
-    <ul>
-      <li>
-        <router-link class="text-red-600 underline" to="/">
-          lien vers
-          <code class="font-mono">/src/pages/index.vue</code>
-        </router-link>
-      </li>
-    </ul>
-  </nav>
+  <div class="bg-grisPages">
+    <nav>
+      <div class="hidden justify-between space-x-12 bg-noirPages px-5 lg:flex">
+        <div class="flex items-center p-2">
+          <RouterLink to="/"><img src="/logo.png" class="w-20" /></RouterLink>
+        </div>
 
-  <SvgFace></SvgFace>
-  <SvgProfil></SvgProfil>
+        <div class="hidden items-center space-x-6 lg:flex">
+          <router-link
+            class="text-blanc no-underline hover:text-indigo-400"
+            to="/personnalisation"
+          >
+            <code class="font-mono">Personnalisation</code>
+          </router-link>
+          <router-link
+            class="text-blanc no-underline hover:text-indigo-400"
+            to="/monCompte"
+          >
+            <code class="font-mono">Mon Compte</code>
+          </router-link>
+        </div>
+      </div>
+    </nav>
 
-  <!-- Affiche les pages -->
-  <Suspense>
-    <router-view class="m-2 border-2 p-2" />
-  </Suspense>
+    <!-- Affiche les pages -->
+    <Suspense>
+      <router-view class="m-2 border-2 p-2" />
+    </Suspense>
+  </div>
 </template>
-
-<script setup lang="ts">
-import { Bars3Icon } from "@heroicons/vue/20/solid";
-import SvgFace from "./components/SvgFace.vue";
-import SvgProfil from "./components/SvgProfil.vue";
-</script>
