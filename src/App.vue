@@ -29,6 +29,8 @@
     <Suspense>
       <router-view class="m-2 border-2 p-2" />
     </Suspense>
+
+    <footer></footer>
   </div>
 </template>
 

@@ -14,8 +14,10 @@
 
 @font-face {
   font-family: "made_cannesregular";
-  src: url("made_cannes_personal_use-webfont.woff2") format("woff2"),
-    url("made_cannes_personal_use-webfont.woff") format("woff");
+  src: url("/src//assets/fonts/made_cannes_personal_use-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/made_cannes_personal_use-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -30,40 +32,8 @@
 
 @font-face {
   font-family: "helveticaregular";
-  src: url("helvetica-webfont.woff2") format("woff2"),
-    url("helvetica-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "helveticabold";
-  src: url("helvetica-bold-webfont.woff2") format("woff2"),
-    url("helvetica-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "helveticabold_oblique";
-  src: url("helvetica-boldoblique-webfont.woff2") format("woff2"),
-    url("helvetica-boldoblique-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "helveticacompressed";
-  src: url("helvetica-compressed-5871d14b6903a-webfont.woff2") format("woff2"),
-    url("helvetica-compressed-5871d14b6903a-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "helveticaoblique";
-  src: url("helvetica-oblique-webfont.woff2") format("woff2"),
-    url("helvetica-oblique-webfont.woff") format("woff");
+  src: url("/src//assets/fonts/helvetica-webfont.woff2") format("woff2"),
+    url("/src/assets/fonts/helvetica-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

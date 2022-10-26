@@ -12,7 +12,7 @@
 
         <img
           src="../../public/montreAccueil.png"
-          alt="Exemple de personnalisation de montre connectée réaliser par nos soins"
+          alt="Exemple de personnalisation de montre connectée réalisée par nos soins"
           class="h-60 justify-items-center"
         />
         <div class="grid content-between">
@@ -24,10 +24,35 @@
         </div>
       </div>
 
-      <div class="">
-        <h1 class="athena">
+      <div class="p-12">
+        <h1 class="font-extrabold">
           Vous souhaitez personnaliser votre montre connectée ?
         </h1>
+        <br />
+        <p class="helvetica">
+          Vous êtes à la bonne adresse ! En seulement quelques clics TIK • TAK
+          vous permettent de posséder une montre connectée unique.
+          <br /><br />La finition de votre montre est entre vos mains !
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-12 flex items-center justify-center">
+      <img
+        src="../../public/doublesMontres.png"
+        alt="Deux différentes personnalisations de montres connectées réalisées par nos soins."
+        class="h-60"
+      />
+      <div class="grid">
+        <p1 class="helvetica mb-5 w-96">
+          Imaginer <b to="/personnalisation">LA</b> montre qui vous ressemble,
+          vous correspond le mieux. Et libérer tout simplement votre créativité
+          !
+        </p1>
+        <p1 class="helvetica w-96">
+          Lancer vous ! <b>Allez-y !</b> C’est vous, qui, maintenant avez les
+          cartes en mains....
+        </p1>
       </div>
     </div>
   </main>
@@ -36,6 +61,10 @@
 <style scoped>
 .azonix {
   font-family: "azonixregular";
+}
+
+.helvetica {
+  font-family: "helveticaregular";
 }
 
 .hautD {
