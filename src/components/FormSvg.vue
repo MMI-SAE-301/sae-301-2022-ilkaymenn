@@ -27,14 +27,14 @@ async function upsertMontre(dataForm, node) {
   if (error) node.setErrors([error.message]);
   else {
     node.setErrors([]);
-    router.push({ name: "montre-edit-id", params: { id: data[0].id } });
+    router.push("/listes");
   }
 }
 </script>
 
 <template>
-  <div>
-    <main>
+  <div class="w-screen overflow-y-hidden">
+    <main class="w-full overflow-hidden">
       <div class="flex justify-around bg-grisPages p-5 text-noir">
         <div class="hautG">
           <p class="azonix text-xl">L'Azox 3700</p>
@@ -44,9 +44,7 @@ async function upsertMontre(dataForm, node) {
           <ul class="flex items-center gap-1 space-x-10">
             <li>
               <a href="#profil"
-                ><img
-                  src="../../public/icones/flechesG.png"
-                  alt="Icônes flèches gauches"
+                ><img src="/icones/flechesG.png" alt="Icônes flèches gauches"
               /></a>
             </li>
             <div class="carousel w-64">
@@ -59,9 +57,7 @@ async function upsertMontre(dataForm, node) {
             </div>
             <li>
               <a href="#face"
-                ><img
-                  src="../../public/icones/flechesD.png"
-                  alt="Icônes flèches droites"
+                ><img src="/icones/flechesD.png" alt="Icônes flèches droites"
               /></a>
             </li>
           </ul>
@@ -140,7 +136,7 @@ async function upsertMontre(dataForm, node) {
                     decorator: { $el: null },
                   }"
                   input-class="peer sr-only "
-                  options-class="flex w-full justify-between gap-5"
+                  options-class="flex w-full justify-around gap-5"
                 >
                   <template #label="context">
                     <div
@@ -269,25 +265,13 @@ async function upsertMontre(dataForm, node) {
           <div class="grid justify-items-center">
             <p class="azonix">ecran</p>
             <img
-              src="../../public/images/ecran.png"
+              src="/images/ecran.png"
               alt="Image d'écran de la montre connectée. "
               class="h-20"
             />
           </div>
         </div>
       </div>
-
-      <!--<ul class="w-24">
-        <li><a href="#slide1">Feuille</a></li>
-        <li><a href="#slide2">Corps</a></li>
-        <li><a href="#slide3">Points</a></li>
-      </ul>
-
-      <FormKit type="form" v-model="montre" @submit="upsertMontre">
-        <FormKitListColors name="design" label="design" />
-        <FormKitListColors name="boitier" label="boitier" />
-        <FormKitListColors name="bracelets" label="bracelets" />
-      </FormKit>-->
     </main>
   </div>
 </template>

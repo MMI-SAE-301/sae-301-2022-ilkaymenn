@@ -23,6 +23,12 @@
           >
             <code class="azonix">Mon Compte</code>
           </router-link>
+          <router-link
+            class="text-blanc no-underline hover:text-indigo-400"
+            to="/listes"
+          >
+            <code class="azonix">Liste</code>
+          </router-link>
         </div>
       </div>
     </nav>
