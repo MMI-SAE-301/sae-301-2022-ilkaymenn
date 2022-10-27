@@ -4,44 +4,58 @@ import { supabase, user } from "@/supabase";
 
 <template>
   <div>
-    <div class="my-5 bg-blue-50 p-3">
-      <div v-if="user">
-        <span class="font-bold">{{ user.email }}</span> vous êtes connecté(e)
-        <button
-          class="mx-5 rounded-xl bg-blue-200 p-3 transition duration-200 hover:bg-red-200"
-          @pointerdown="supabase.auth.signOut()"
-        >
-          Se déconnecter
-        </button>
+    <div class="columns-2">
+      <div class="-m-5 bg-noirPages">
+        <img
+          src="../../public/images/montre_seco.png"
+          alt="Exemple de montre connectée réalisée par nos soins."
+        />
       </div>
+      <div>
+        <div>
+          <div class="my-5 bg-blue-50 p-3">
+            <div v-if="user">
+              <span class="font-bold">{{ user.email }}</span> vous êtes
+              connecté(e)
+              <button
+                class="mx-5 rounded-xl bg-blue-200 p-3 transition duration-200 hover:bg-red-200"
+                @pointerdown="supabase.auth.signOut()"
+              >
+                Se déconnecter
+              </button>
+            </div>
 
-      <button
-        class="mx-5 rounded-xl bg-blue-200 p-3 transition duration-200 hover:bg-blue-500 hover:text-white"
-        v-else
-        @pointerdown="supabase.auth.signIn({ provider: 'google' })"
-      >
-        Se connecter avec Google
-      </button>
-    </div>
+            <button
+              class="mx-5 rounded-xl bg-blue-200 p-3 transition duration-200 hover:bg-blue-500 hover:text-white"
+              v-else
+              @pointerdown="supabase.auth.signIn({ provider: 'google' })"
+            >
+              Se connecter avec Google
+            </button>
+          </div>
 
-    <div class="my-5 bg-blue-50 p-3">
-      <div v-if="user">
-        <span class="font-bold">{{ user.email }}</span> vous êtes connecté(e)
-        <button
-          class="mx-5 rounded-xl bg-blue-200 p-3 transition duration-200 hover:bg-red-200"
-          @pointerdown="supabase.auth.signOut()"
-        >
-          Se déconnecter
-        </button>
+          <div class="my-5 bg-blue-50 p-3">
+            <div v-if="user">
+              <span class="font-bold">{{ user.email }}</span> vous êtes
+              connecté(e)
+              <button
+                class="mx-5 rounded-xl bg-blue-200 p-3 transition duration-200 hover:bg-red-200"
+                @pointerdown="supabase.auth.signOut()"
+              >
+                Se déconnecter
+              </button>
+            </div>
+
+            <button
+              class="mx-5 rounded-xl bg-blue-200 p-3 transition duration-200 hover:bg-blue-500 hover:text-white"
+              v-else
+              @pointerdown="supabase.auth.signIn({ provider: 'facebook' })"
+            >
+              Se connecter avec Facebook
+            </button>
+          </div>
+        </div>
       </div>
-
-      <button
-        class="mx-5 rounded-xl bg-blue-200 p-3 transition duration-200 hover:bg-blue-500 hover:text-white"
-        v-else
-        @pointerdown="supabase.auth.signIn({ provider: 'facebook' })"
-      >
-        Se connecter avec Facebook
-      </button>
     </div>
   </div>
 </template>
