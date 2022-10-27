@@ -8,18 +8,22 @@ ecran varchar,
 bracelet varchar, 
 boitier varchar, 
 commande bool, 
-id_materiaux uuid, 
-id_user uuid , 
+id_materiaux_boitier uuid, 
+id_materiaux_bracelets uuid, 
+id_user uuid default uid(), 
 PRIMARY KEY (id_montre), 
-FOREIGN KEY (id_materiaux) REFERENCES materiaux (id_materiaux),
+FOREIGN KEY (id_materiaux_boitier) REFERENCES materiaux (id_materiaux),
+FOREIGN KEY (id_materiaux_bracelets) REFERENCES materiaux (id_materiaux),
 FOREIGN KEY (id_user) REFERENCES auth.users (id) 
 );
 
 CREATE TABLE materiaux ( 
-id_materiaux uuid default uuid_generate_v4(), 
+id_materiaux_boitier uuid default uuid_generate_v4(), 
+id_materiaux_bracelets uuid default uuid_generate_v4(), 
 libelle varchar, 
 url varchar, 
-PRIMARY KEY (id_materiaux) 
+PRIMARY KEY (id_materiaux_boitier),
+PRIMARY KEY (id_materiaux_bracelets) 
 );
 */  
 
@@ -70,6 +74,10 @@ Table montre : Editing policy from public.montre
     (uid() = id_user)
     (uid() IN ( SELECT montre_1.id_user
             FROM montre montre_1))
+
+    Enable delete for users based on user_id
+    /rien
+    (uid() = id_user)
 
 Table materiaux : Editing policy from public.materiaux
     Enable read access for all users

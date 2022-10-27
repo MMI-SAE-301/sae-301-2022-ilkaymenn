@@ -2,10 +2,10 @@
 
 - **Nom : Men**
 - **Prénom : Ilkay**
-- **URL maquette Figma: https://www.figma.com/proto/5NalINZBR0VUEuy6WjTLsw/SAE_301?page-id=1%3A553&node-id=73%3A3962&viewport=898%2C-497%2C0.12&scaling=contain&starting-point-node-id=73%3A3962&show-proto-sidebar=1**
+- **URL maquette Figma: https://www.figma.com/file/5NalINZBR0VUEuy6WjTLsw/SAE_301?node-id=0%3A1**
 - **URL publique du site :**
 - **URL projet Supabase : https://wuwiwcfxxqnutwsiblzv.supabase.co**
-  - [ ] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
+  - [x] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
 # Auto-évaluation
 
@@ -15,7 +15,7 @@ Vous avez rendu à la racine du projet :
 
 - [ ] Le modèle conceptuel de données (nom : [MCD.png](/MCD.png) ou [MCD.pdf](/MCD.pdf) [^1])
 - [x] Et compléter le fichier [bdd.sql](/bdd.sql) détaillant le code pour la création des tables, vues et policies créées
-- [ ] Avez-vous bien invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase comme développeur ?
+- [x] Avez-vous bien invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase comme développeur ? Oui mais l'invitation fait qu'expirer
 
 ## R312 | Intégrer ([Pierre Pracht : AC 2401](https://moodle.univ-fcomte.fr/mod/assign/view.php?id=612668))
 
