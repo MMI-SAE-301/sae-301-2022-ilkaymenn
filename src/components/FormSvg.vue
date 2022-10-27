@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { colors } from "@/types";
+import { colors, materiaux } from "@/types";
 //import type { Montre } from "@/types";
 import { ref } from "vue";
 import { supabase } from "../supabase";
@@ -99,18 +99,37 @@ async function upsertMontre(dataForm, node) {
       </div>
 
       <div>
-        <div class="-m-5 flex justify-between bg-noirPages p-10 text-blanc">
+        <div
+          class="-m-5 flex h-full w-screen justify-between bg-noirPages p-10 text-blanc"
+        >
           <ul class="azonix grid w-24 justify-items-center space-y-4">
-            <li><a href="#slide1">Ecran</a></li>
-            <li><a href="#slide2">Boitier</a></li>
-            <li><a href="#slide3">Bracelet</a></li>
+            <li>
+              <a
+                href="#slide1"
+                class="hover:underline hover:underline-offset-8 focus:underline focus:underline-offset-8"
+                >Ecran</a
+              >
+            </li>
+            <li>
+              <a
+                href="#slide2"
+                class="hover:underline hover:underline-offset-8 focus:underline focus:underline-offset-8"
+                >Boitier</a
+              >
+            </li>
+            <li>
+              <a
+                href="#slide3"
+                class="hover:underline hover:underline-offset-8 focus:underline focus:underline-offset-8"
+                >Bracelet</a
+              >
+            </li>
           </ul>
 
           <FormKit type="form" v-model="montre" @submit="upsertMontre">
-            <div class="carousel w-48 text-center">
-              <div class="carousel-item text-xl">
+            <div class="carousel w-[300px] items-center space-x-20 text-center">
+              <div id="slide1" class="carousel-item text-xl">
                 <FormKit
-                  id="slide1"
                   name="design"
                   label="Ecran"
                   value="#FFFFFF"
@@ -120,8 +139,8 @@ async function upsertMontre(dataForm, node) {
                     inner: { $el: null },
                     decorator: { $el: null },
                   }"
-                  input-class="peer sr-only"
-                  options-class="flex gap-1"
+                  input-class="peer sr-only "
+                  options-class="flex w-full justify-between gap-5"
                 >
                   <template #label="context">
                     <div
@@ -134,9 +153,12 @@ async function upsertMontre(dataForm, node) {
                   >
                 </FormKit>
               </div>
-              <div class="carousel-item text-xl">
+
+              <div
+                id="slide2"
+                class="carousel-item flex w-[300px] flex-col gap-y-10 text-xl"
+              >
                 <FormKit
-                  id="slide2"
                   name="boitier"
                   label="Boitier"
                   value="#FFFFFF"
@@ -147,7 +169,7 @@ async function upsertMontre(dataForm, node) {
                     decorator: { $el: null },
                   }"
                   input-class="peer sr-only"
-                  options-class="flex gap-1"
+                  options-class="flex w-full justify-between gap-5"
                 >
                   <template #label="context">
                     <div
@@ -159,10 +181,39 @@ async function upsertMontre(dataForm, node) {
                     }}</span></template
                   >
                 </FormKit>
-              </div>
-              <div class="carousel-item text-xl">
+
                 <FormKit
-                  id="slide3"
+                  name="id_materiaux_boitier"
+                  label="materiau du boitier"
+                  value="e24298c0-cd56-4193-9167-1fc9066ed30a"
+                  type="radio"
+                  :options="materiaux"
+                  :sections-schema="{
+                    inner: { $el: null },
+                    decorator: { $el: null },
+                  }"
+                  legend-class="sr-only"
+                  input-class="peer sr-only"
+                  options-class="flex w-full justify-between gap-5"
+                  wrapper-class="flex flex-col items-center"
+                >
+                  <template #label="context">
+                    <img
+                      class="h-10 w-10 rounded-full border-2 peer-checked:border-red-600"
+                      :src="context.option.img"
+                      :alt="context.option.label"
+                    />
+
+                    <span>{{ context.option.label }}</span>
+                  </template>
+                </FormKit>
+              </div>
+
+              <div
+                id="slide3"
+                class="carousel-item flex w-[300px] flex-col gap-y-10 text-xl"
+              >
+                <FormKit
                   name="bracelets"
                   label="Bracelet"
                   value="#FFFFFF"
@@ -173,7 +224,7 @@ async function upsertMontre(dataForm, node) {
                     decorator: { $el: null },
                   }"
                   input-class="peer sr-only"
-                  options-class="flex gap-1"
+                  options-class="flex w-full justify-between gap-5"
                 >
                   <template #label="context">
                     <div
@@ -184,6 +235,32 @@ async function upsertMontre(dataForm, node) {
                       context.option.label
                     }}</span></template
                   >
+                </FormKit>
+
+                <FormKit
+                  name="id_materiaux_bracelets"
+                  label="materiau du boitier"
+                  value="e24298c0-cd56-4193-9167-1fc9066ed30a"
+                  type="radio"
+                  :options="materiaux"
+                  :sections-schema="{
+                    inner: { $el: null },
+                    decorator: { $el: null },
+                  }"
+                  legend-class="sr-only"
+                  input-class="peer sr-only"
+                  options-class="flex w-full justify-between gap-5"
+                  wrapper-class="flex flex-col items-center"
+                >
+                  <template #label="context">
+                    <img
+                      class="h-10 w-10 rounded-full border-2 peer-checked:border-red-600"
+                      :src="context.option.img"
+                      :alt="context.option.label"
+                    />
+
+                    <span>{{ context.option.label }}</span>
+                  </template>
                 </FormKit>
               </div>
             </div>

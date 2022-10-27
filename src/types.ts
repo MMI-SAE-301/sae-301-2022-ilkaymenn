@@ -13,3 +13,21 @@ export const colors = {
   "#F9DDDA": "Rose",
   "#B5B5B5": "GrisSideral",
 };
+
+export const materiaux = [
+  {
+    value: "863fb6e0-ccb3-444b-b04e-4223fa0627bc",
+    img: "public/images/matieres/cuir.png",
+    label: "Cuir",
+  },
+  {
+    value: "dd72311f-2a4f-4ca3-8b97-37d9ec384256",
+    img: "public/images/matieres/caoutchouc.png",
+    label: "Caoutchouc",
+  },
+  {
+    value: "7a2cf29a-7816-4201-a9c3-3293e9f72441",
+    img: "public/images/matieres/acier.png",
+    label: "Acier",
+  },
+];
