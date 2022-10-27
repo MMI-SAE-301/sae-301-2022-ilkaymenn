@@ -9,11 +9,11 @@ import SvgProfil from "../components/SvgProfil.vue";
 //import FormKitListColors from "./FormKitListColors.vue";
 import type { Montre } from "@/types";
 
-const montre = ref<Montre>(props.data ?? {});
-
 const router = useRouter();
 
-const props = defineProps(["id"]);
+const props = defineProps(["id", "data"]);
+const montre = ref<Montre>(props.data ?? {});
+
 if (props.id) {
   // On charge les données de la montre
   let { data, error } = await supabase

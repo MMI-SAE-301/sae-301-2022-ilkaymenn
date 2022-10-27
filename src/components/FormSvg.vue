@@ -22,6 +22,7 @@ if (props.id) {
     console.log("n'a pas pu charger le table montre :", error);
   else montre.value = data[0];
 }
+// @ts-ignore
 async function upsertMontre(dataForm, node) {
   const { data, error } = await supabase.from("montre").upsert(dataForm);
   if (error) node.setErrors([error.message]);
@@ -48,12 +49,12 @@ async function upsertMontre(dataForm, node) {
               /></a>
             </li>
             <div class="carousel w-64">
-              <SvgProfil
-                class="carousel-item w-64"
-                v-bind="montre"
-                id="profil"
-              />
-              <SvgFace class="carousel-item w-64" v-bind="montre" id="face" />
+              <div id="profil">
+                <SvgProfil class="carousel-item w-64" v-bind="montre" />
+              </div>
+              <div id="face">
+                <SvgFace class="carousel-item w-64" v-bind="montre" />
+              </div>
             </div>
             <li>
               <a href="#face"
