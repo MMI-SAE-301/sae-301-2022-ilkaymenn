@@ -12,7 +12,4 @@ export const colors = {
   "#E2D8CF": "Creme",
   "#F9DDDA": "Rose",
   "#B5B5B5": "GrisSideral",
-
-  "#212121": "noirPages",
-  "#E7E7E7": "grisPages,",
 };
