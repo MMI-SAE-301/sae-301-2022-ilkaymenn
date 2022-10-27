@@ -22,7 +22,6 @@ module.exports = {
       fontSize: {
         base: "0.875rem",
         lg: "1.25rem",
-        
       },
       fontFamily: {
         modern: "Modern No. 20",
@@ -38,7 +37,6 @@ module.exports = {
     require("daisyui"),
   ],
 };
-
 
 /* Text-size styles 
 --footer: 16px;
