@@ -122,7 +122,17 @@ async function upsertMontre(dataForm, node) {
             </li>
           </ul>
 
-          <FormKit type="form" v-model="montre" @submit="upsertMontre">
+          <FormKit
+            type="form"
+            v-model="montre"
+            @submit="upsertMontre"
+            :submit-attrs="{
+              classes: {
+                input:
+                  'bg-grisPages azonix border-2 text-black rounded-xl hover:bg-black  hover:text-blue-600 p-2',
+              },
+            }"
+          >
             <div class="carousel w-[300px] items-center space-x-20 text-center">
               <div id="slide1" class="carousel-item text-xl">
                 <FormKit
