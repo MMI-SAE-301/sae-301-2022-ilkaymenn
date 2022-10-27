@@ -20,7 +20,7 @@ let user = supabase.auth.user();
 
 const { data: montre, error } = await supabase.from("montre").select("*");
 if (error) {
-  console.log("n'a pas pu récupérer les baskets", { error });
+  console.log("n'a pas pu récupérer les montres", { error });
 }
 </script>
 <template>

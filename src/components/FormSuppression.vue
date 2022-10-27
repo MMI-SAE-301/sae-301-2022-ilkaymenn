@@ -99,8 +99,4 @@ async function supprimerMontre() {
   </div>
 </template>
 
-<style scoped>
-.rayer {
-  text-decoration: line-through;
-}
-</style>
+<style scoped></style>
