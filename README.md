@@ -3,7 +3,8 @@
 - **Nom : Men**
 - **Prénom : Ilkay**
 - **URL maquette Figma: https://www.figma.com/file/5NalINZBR0VUEuy6WjTLsw/SAE_301?node-id=0%3A1**
-- **URL publique du site :**
+- **URL publique du site Netlify : https://melodious-moonbeam-cf41df.netlify.app **
+- **URL publique du site Heroku : https://tiktakilkaymen.herokuapp.com **
 - **URL projet Supabase : https://wuwiwcfxxqnutwsiblzv.supabase.co**
   - [x] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
